@@ -151,7 +151,7 @@ const singelContent = (data, name) => {
                         </div>
                     </div>
                     <i class="fa-regular fa-eye"> <span id="view"> ${i.total_view}</span></i>
-                    <div class="ratting">
+                    <div class="ratting" id="ratting-${i._id}">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star-half-stroke"></i>
@@ -163,6 +163,86 @@ const singelContent = (data, name) => {
             </div>
         </div>
     </div>`
+
+        let rat = document.getElementById("ratting-" + i._id);
+        if (i.rating.number == 0.0) {
+            rat.innerHTML = `
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>`
+        } else if (i.rating.number >= 0.1 && i.rating.number <= 0.5) {
+            rat.innerHTML = `
+        <i class="fa-solid fa-star-half-stroke"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>`
+        } else if (i.rating.number >= 0.6 && i.rating.number <= 1.0) {
+            rat.innerHTML = `
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>`
+        } else if (i.rating.number >= 1.1 && i.rating.number <= 1.5) {
+            rat.innerHTML = `
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>`
+        } else if (i.rating.number >= 1.6 && i.rating.number <= 2.0) {
+            rat.innerHTML = `
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>`
+        } else if (i.rating.number >= 2.1 && i.rating.number <= 2.5) {
+            rat.innerHTML = `
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>`
+        } else if (i.rating.number >= 2.6 && i.rating.number <= 3.0) {
+            rat.innerHTML = `
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>`
+        } else if (i.rating.number >= 3.1 && i.rating.number <= 3.5) {
+            rat.innerHTML = `
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+        <i class="fa-regular fa-star"></i>`
+        } else if (i.rating.number >= 3.6 && i.rating.number <= 4.0) {
+            rat.innerHTML = `
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>`
+        } else if (i.rating.number >= 4.1 && i.rating.number <= 4.5) {
+            rat.innerHTML = `
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>`
+        } else if (i.rating.number >= 4.6 && i.rating.number <= 5.0) {
+            rat.innerHTML = `
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>`
+        }
     })
 }
 
