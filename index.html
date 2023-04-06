@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav class="common">
+        <div class="nav-bar">
+            <div class="log">
+                <span class="logo1">News</span><span class="logo2">Portal</span>
+            </div>
+            <div class="nev-link">
+                <a class="active" href="#">News</a>
+                <a href="#">Blog</a>
+                <img src="assets/Avatar.png">
+            </div>
+            <i class="fa-solid fa-bars menu" id="menu-btn"></i>
+        </div>
+    </nav>
+
+    <section class="common">
+        <div class="category" id="categorys">
+            <p class="active">Home</p>
+        </div>
+
+        <div class="alert-dialog">
+            <p id="alert-txt"></p>
+        </div>
+
+        <div class="selecting">
+            <div class="sorting">
+                <h3>Sort By View:</h3>
+                <select name="sort" id="sort">
+                    <option value="default">Default</option>
+                    <option value="ascending">Ascending Order</option>
+                    <option value="descending">Descending Order</option>
+                    <option value="views">Views Order</option>
+                </select>
+            </div>
+
+            <div class="t-p">
+                <span id="btn-1">Today’s Pick</span>
+                <span id="btn-2">Trending</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="common" id="container">
+
+    </section>
+
+    <section id="loading">
+        <div class="loading-box">
+            <div class="loader"></div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>Copyright 2021 News Portal</p>
+    </footer>
+</body>
+
+</html>
